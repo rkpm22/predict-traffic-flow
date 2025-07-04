@@ -10,6 +10,7 @@ A machine learning-powered web application that predicts traffic conditions base
 - [Installation](#installation)
 - [Usage](#usage)
 - [Model Performance](#model-performance)
+- [Data Analysis & Insights](#data-analysis--insights)
 - [Dataset](#dataset)
 - [Technology Stack](#technology-stack)
 - [Contributing](#contributing)
@@ -25,14 +26,21 @@ This project uses machine learning to classify traffic conditions into four cate
 
 The system analyzes vehicle counts (cars, bikes, buses, trucks) and time-based features to make accurate predictions using a Random Forest classifier.
 
+## 📸 Application Interface
+
+![Traffic Situation Predictor Interface](assets/screenshot-traffic-predictor.png)
+
+*The sleek, modern interface of the Traffic Situation Predictor with real-time prediction capabilities*
+
 ## ✨ Features
 
-- **Real-time Prediction**: Instant traffic condition classification
-- **Interactive Web Interface**: User-friendly Streamlit web application
-- **Time-based Analysis**: Incorporates hourly and minute-level temporal patterns
-- **Multi-vehicle Support**: Analyzes cars, bikes, buses, and trucks separately
-- **Beautiful UI**: Modern design with traffic-themed background and styling
-- **Model Persistence**: Pre-trained models saved for quick deployment
+- **🎯 Real-time Prediction**: Instant traffic condition classification with one-click prediction
+- **🎨 Beautiful Interface**: Modern, responsive design with stunning traffic-themed background
+- **🚗 Multi-vehicle Analysis**: Separate input controls for cars, bikes, buses, and trucks
+- **⏰ Time-based Controls**: Interactive hour and minute dropdown selectors
+- **📊 Visual Results**: Clear prediction display with color-coded traffic status
+- **🎛️ Intuitive Controls**: Easy-to-use increment/decrement buttons for vehicle counts
+- **⚡ Fast Processing**: Instant predictions powered by pre-trained Random Forest model
 
 ## 📁 Project Structure
 
@@ -90,17 +98,26 @@ predict-traffic-flow/
 
 ### Using the Application
 
-1. **Enter Vehicle Counts:**
-   - Number of Cars
-   - Number of Bikes
-   - Number of Buses
-   - Number of Trucks
+1. **📊 Enter Vehicle Counts:**
+   - Use the **+/-** buttons or type directly to set:
+     - Number of Cars (default: 100)
+     - Number of Bikes (default: 70)
+     - Number of Buses (default: 35)
+     - Number of Trucks (default: 10)
 
-2. **Set Time Parameters:**
-   - Hour (0-23)
-   - Minute (0, 15, 30, 45)
+2. **⏰ Configure Time Settings:**
+   - Select **Hour** from dropdown (0-23)
+   - Select **Minute** from dropdown (0-59)
 
-3. **Click "Predict Traffic Situation"** to get instant results
+3. **🎯 Get Prediction:**
+   - Click the **"🚦 Predict Traffic Situation"** button
+   - View the result in the green status bar showing predicted traffic condition
+
+4. **📈 Interpret Results:**
+   - **🟢 Low**: Minimal traffic flow
+   - **🟡 Normal**: Regular traffic conditions  
+   - **🟠 High**: Heavy traffic flow
+   - **🔴 Heavy**: Extremely congested conditions
 
 ### Jupyter Notebook Analysis
 
@@ -116,6 +133,24 @@ jupyter notebook notebooks/Predict-traffic-flow.ipynb
 - **Classes**: 4 traffic categories (Low, Normal, High, Heavy)
 - **Training Data**: 2,976 records with 15-minute intervals
 - **Feature Scaling**: StandardScaler for numerical normalization
+
+## 📈 Data Analysis & Insights
+
+### Traffic Patterns by Time
+![Average Traffic By Hour](assets/AverageTrafficByHourOfTheDay.png)
+*Average traffic distribution throughout the day showing peak hours and patterns*
+
+### Vehicle Distribution Analysis
+![Vehicle Counts by Day of Week](assets/VehicleCountsPerDayoftheWeek.png)
+*Vehicle count patterns across different days of the week*
+
+### Time Series Analysis
+![Vehicle Counts Over Time](assets/VehicleCountsOverTime.png)
+*Historical vehicle counts showing temporal trends and variations*
+
+### Model Feature Importance
+![Feature Importance - Random Forest](assets/FeatureImportance%20-RandomForest.png)
+*Random Forest feature importance showing which factors most influence traffic predictions*
 
 ## 📈 Dataset
 
@@ -167,7 +202,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-For questions or suggestions, please open an issue in the repository.
+email: raunaksinghkhalsa@gmail.com
 
 ---
 
